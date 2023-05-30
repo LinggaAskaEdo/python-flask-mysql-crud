@@ -31,5 +31,5 @@ docker run -d -p 5000:5000 python-flask-mysql-crud
 
 ### Run App via Docker Compose
 ```python
-docker-compose up --build
+docker-compose up -d --build
 ```

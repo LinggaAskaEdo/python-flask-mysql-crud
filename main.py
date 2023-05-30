@@ -36,6 +36,7 @@ def add_user_view():
 def add_user():
     conn = None
     cursor = None
+
     try:
         _name = request.form["inputName"]
         _email = request.form["inputEmail"]
@@ -70,6 +71,7 @@ def add_user():
 def edit_view(id):
     conn = None
     cursor = None
+
     try:
         conn = mysql.connect()
         cursor = conn.cursor(pymysql.cursors.DictCursor)
@@ -90,6 +92,7 @@ def edit_view(id):
 def update_user():
     conn = None
     cursor = None
+
     try:
         _name = request.form["inputName"]
         _email = request.form["inputEmail"]
@@ -127,6 +130,7 @@ def update_user():
 def delete_user(id):
     conn = None
     cursor = None
+
     try:
         conn = mysql.connect()
         cursor = conn.cursor()
