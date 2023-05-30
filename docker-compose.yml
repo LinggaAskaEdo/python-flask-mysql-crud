@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    image: python-flask-mysql-crud
+    command:
+      - python
+      - main.py
+    ports:
+      - ${PORT:-5000}:5000
+    volumes:
+      - ./:/app
+    network_mode: bridge
